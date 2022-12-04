@@ -1,0 +1,5 @@
+name: EE User Registration
+description: 'EE user registration form for testing'
+type: module
+package: EE_Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,7 @@
+ee_user_registration.form:
+  path: '/registration'
+  defaults:
+    _form: '\Drupal\ee_user_registration\Form\EERegistrationForm'
+    _title: 'EE Registration New User'
+  requirements:
+    _access: 'TRUE'

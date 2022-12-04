@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Install, schema functions for the ee_user_registration module.
+ */
+
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by ee_user_registration form.
+ *
+ * @see hook_schema()
+ *
+ * @ingroup ee_user_registration
+ */
+function ee_user_registration_schema() {
+  $schema['user_custom_details'] = [
+    'description' => 'Table about custom data info',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'unsigned' => TRUE,
+        'description' => 'Primary Key: Unique Record ID.',
+      ],
+      'full_name' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Full Name',
+      ],
+      'phone_number' => [
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => TRUE,
+        'description' => 'Phone Number',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
